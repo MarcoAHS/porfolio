@@ -1,7 +1,12 @@
 ---
 import GitHub from "./icons/GitHub.astro"
 import NextJS from "./icons/NextJS.astro"
+import PHP from "./icons/PHP.astro"
+import CSS from "./icons/CSS.astro"
+import HTML from "./icons/HTML.astro"
 import Tailwind from "./icons/Tailwind.astro"
+import Fav from "./icons/Fav.astro"
+import React from "./icons/React.astro"
 import Link from "./icons/Link.astro"
 import LinkButton from "./LinkButton.astro"
 
@@ -16,25 +21,51 @@ const TAGS = {
     class: "bg-[#003159] text-white",
     icon: Tailwind,
   },
+  PHP: {
+    name: "PHP",
+    class: "bg-[#474A8A] text-white",
+    icon: PHP
+  },
+  CSS: {
+    name: "CSS",
+    class: "bg-[#2965f1] text-white",
+    icon: CSS
+  },
+  HTML: {
+    name: "HTML",
+    class: "bg-[#f06529] text-white",
+    icon: HTML
+  },
+  ASTRO: {
+    name: "Astro",
+    class: "bg-orange-700 text-white",
+    icon: Fav
+  },
+  REACT: {
+    name: "React",
+    class: "bg-sky-700 text-white",
+    icon: React
+  }
 }
 const PROJECTS = [
   {
-    title: "SVGL - A beautiful library with SVG logos",
+    title: "Blog de Cafe",
     description:
-      "Biblioteca de logos SVG de las marcas más populares. +10k visitas al mes. +2K svgs descargados. Creado desde cero con Next.js, React y Tailwind CSS.",
-    link: "https://svgl.vercel.app/",
-    github: "https://github.com/pheralb/svgl",
-    image: "/projects/svgl.webp",
-    tags: [TAGS.NEXT, TAGS.TAILWIND],
+      "Proyecto de Landing Page tipo Blog realizado con PHP, HTML y CSS puros",
+    link: "https://boisterous-monstera-868e0e.netlify.app/",
+    github: "https://github.com/MarcoAHS/PHP.Webs/tree/main/MarcoAntonioBlogCafe",
+    image: "https://app.netlify.com/.netlify/images?url=https://d33wubrfki0l68.cloudfront.net/63bf54554e8ceb5b4c5ba3c1/screenshot_2023-01-12-00-29-11-0000.png&fit=cover&h=500&w=800",
+    tags: [TAGS.CSS, TAGS.PHP, TAGS.HTML],
   },
   {
-    title: "AdventJS - Retos de programación con JavaScript y TypeScript",
+    title: "Clon de Spotify (Clonify)",
     description:
-      "Plataforma gratuita con retos de programación. Más de 1 millón de visitas en un mes. +50K retos completados. Creada desde cero con Next.js, React y Tailwind CSS.",
-    link: "https://adventjs.dev",
-    image: "/projects/adventjs.webp",
-    tags: [TAGS.NEXT, TAGS.TAILWIND],
-  },
+      "Clon de Spotify, funcional, con transisiones entre paginas para que se conserve el Layout, y el estado del Reproducto de Musica no se interrumpa, para esto utilice Astro, y tambien utilice TailwindCSS, Componentes de React, y un estado Global usando Zustand",
+    link: "https://elaborate-sopapillas-9fc246.netlify.app/",
+    github: "https://github.com/MarcoAHS/Clonify",
+    image: "https://app.netlify.com/.netlify/images?url=https://d33wubrfki0l68.cloudfront.net/667350be70b58f9bee9eb4a0/screenshot_2024-06-19-21-44-06-0000.webp&fit=cover&h=500&w=800",
+    tags: [TAGS.TAILWIND, TAGS.ASTRO, TAGS.REACT],
+  }
 ]
 ---
 
@@ -44,7 +75,7 @@ const PROJECTS = [
     <article class="flex flex-col space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0">
   <div class="w-full md:w-1/2">
     <div class="relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50">
-      <img alt="Recién llegado vs 5 años en Nueva Zelanda" class="object-cover object-top w-full h-56 transition duration-500 sm:h-full md:scale-110 md:group-hover:scale-105" loading="lazy" src={image} />
+      <img alt=`Imagen de Proyecto ${title}` class="object-cover object-top w-full h-56 transition duration-500 sm:h-full md:scale-110 md:group-hover:scale-105" loading="lazy" src={image} />
     </div>
   </div>
 
