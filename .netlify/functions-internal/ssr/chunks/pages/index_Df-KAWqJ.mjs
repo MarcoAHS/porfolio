@@ -375,7 +375,7 @@ Experiencia laboral
 Proyectos
 </h2> ${renderComponent($$result3, "Projects", $$Projects, {})} ` })} ${renderComponent($$result2, "SectionContainer", $$SectionContainer, { "id": "sobre-mi" }, { "default": ($$result3) => renderTemplate` <h2 class="flex items-center mb-6 text-3xl font-semibold gap-x-8 text-black/80 dark:text-white"> ${renderComponent($$result3, "ProfileCheck", $$ProfileCheck, { "class": "size-8" })}
 Sobre mí
-</h2> ${renderComponent($$result3, "AboutMe", $$AboutMe, {})} ` })} <div class="w-full mx-auto container lg:max-w-4xl md:max-w-2xl flex flex-col items-center"> <a target="_blank" href="./files/CV.pdf" class="bg-zinc-800/90 transition-all duration-300  py-3 px-10 rounded-lg items-center hover:bg-zinc-600/90 cursor-pointer">Descarga mi CV!</a> </div> </div> </main> ` })}`;
+</h2> ${renderComponent($$result3, "AboutMe", $$AboutMe, {})} ` })} <div class="w-full mx-auto container lg:max-w-4xl md:max-w-2xl flex flex-col items-center"> <a target="_blank" href="/files/CV.pdf" class="bg-zinc-800/90 transition-all duration-300  py-3 px-10 rounded-lg items-center hover:bg-zinc-600/90 cursor-pointer">Descarga mi CV!</a> </div> </div> </main> ` })}`;
 }, "D:/Program Files/Dev/Porfolio/src/pages/index.astro", void 0);
 
 const $$file = "D:/Program Files/Dev/Porfolio/src/pages/index.astro";
