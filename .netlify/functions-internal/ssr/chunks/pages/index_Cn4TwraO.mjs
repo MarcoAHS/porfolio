@@ -113,7 +113,7 @@ const $$Layout = createComponent(($$result, $$props, $$slots) => {
       class="absolute top-0 bottom-0 z-[-2] min-h-screen w-full bg-gray-50 dark:bg-gray-950
       bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(217,216,255,0.5),rgba(255,255,255,0.9))]
       dark:bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))]"
-    > --> ${renderComponent($$result, "SpaceBG", SpaceBG, { "client:load": true, "client:component-hydration": "load", "client:component-path": "@/components/SpaceBG", "client:component-export": "SpaceBG" })} ${renderComponent($$result, "Header", $$Header, {})} ${renderSlot($$result, $$slots["default"])} ${renderComponent($$result, "Footer", $$Footer, {})}  </body> </html>`;
+    > --> ${renderComponent($$result, "SpaceBG", SpaceBG, { "client:load": true, "client:component-hydration": "load", "client:component-path": "D:/Program Files/Dev/Porfolio/src/components/SpaceBG", "client:component-export": "SpaceBG" })} ${renderComponent($$result, "Header", $$Header, {})} ${renderSlot($$result, $$slots["default"])} ${renderComponent($$result, "Footer", $$Footer, {})}  </body> </html>`;
 }, "D:/Program Files/Dev/Porfolio/src/layouts/Layout.astro", void 0);
 
 const $$AboutMe = createComponent(($$result, $$props, $$slots) => {
