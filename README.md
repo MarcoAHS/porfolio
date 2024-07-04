@@ -1,7 +1,7 @@
-# 👨🏻‍💻 Porfolio para programadores y desarrolladores
+# 👨🏻‍💻 Porfolio Personalizado
 
 <div align="center">
-<a href="https://porfolio.dev/">
+<a href="https://lucent-bublanina-a2ba53.netlify.app/">
 <img src="./public/porfolio.webp">
 </a>
 <p></p>
@@ -17,11 +17,3 @@
 ![GitHub issues](https://img.shields.io/github/issues/midudev/porfolio.dev)
 
 </div>
-
-## 🫂 Contribuidores
-
-<a href="https://github.com/midudev/porfolio.dev/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=midudev/porfolio.dev" />
-</a>
-
-<p></p>

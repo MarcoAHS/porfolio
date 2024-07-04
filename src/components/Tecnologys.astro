@@ -1,0 +1,147 @@
+---
+import NextJS from "./icons/NextJS.astro"
+import PHP from "./icons/PHP.astro"
+import CSS from "./icons/CSS.astro"
+import HTML from "./icons/HTML.astro"
+import Tailwind from "./icons/Tailwind.astro"
+import Fav from "./icons/Fav.astro"
+import React from "./icons/React.astro"
+import Jquery from "./icons/Jquery.astro"
+import Mysql from "./icons/Mysql.astro"
+import Vite from "./icons/Vite.astro"
+import Netlify from "./icons/Netlify.astro"
+import C from "./icons/C.astro"
+import Js from "./icons/Js.astro"
+import Python from "./icons/Python.astro"
+import Git from "./icons/Git.astro"
+import NPM from "./icons/npm.astro"
+
+let Tec = [
+    {
+        name: "Next.js",
+        class: "bg-black text-white",
+        icon: NextJS,
+        link: "https://nextjs.org/"
+    },
+    {
+        name: "Tailwind CSS",
+        class: "bg-[#003159] text-white",
+        icon: Tailwind,
+        link: "https://tailwindcss.com/"
+    },
+    {
+        name: "PHP",
+        class: "bg-[#474A8A] text-white",
+        icon: PHP,
+        link: "https://www.php.net/"
+    },
+    {
+        name: "CSS",
+        class: "bg-[#2965f1] text-white",
+        icon: CSS,
+        link: "https://developer.mozilla.org/es/docs/Web/CSS"
+    },
+    {
+        name: "HTML",
+        class: "bg-[#f06529] text-white",
+        icon: HTML,
+        link: "https://developer.mozilla.org/es/docs/Web/HTML"
+    },
+    {
+        name: "Astro",
+        class: "bg-orange-700 text-white",
+        icon: Fav,
+        link: "https://astro.build/"
+    },
+    {
+        name: "React",
+        class: "bg-sky-700 text-white",
+        icon: React,
+        link: "https://es.react.dev/"
+    },
+    {
+        name: "Jquery",
+        class: "bg-sky-700 text-white",
+        icon: Jquery,
+        link: "https://jquery.com/"
+    },
+    {
+        name: "MySQL",
+        class: "bg-[#00758f] text-white",
+        icon: Mysql,
+        link: "https://www.mysql.com/"
+    },
+    {
+        name: "Vite",
+        class: "bg-purple-300 text-white",
+        icon: Vite,
+        link: "https://vitejs.dev/"
+    },
+    {
+        name: "Nettlify",
+        class: "bg-green-300 text-white",
+        icon: Netlify,
+        link: "https://www.netlify.com/"
+    },
+    {
+        name: "C#",
+        class: "bg-purple-700 text-white",
+        icon: C,
+        link: "https://dotnet.microsoft.com/es-es/languages/csharp"
+    },
+    {
+        name: "Javascript",
+        class: "bg-[#f0db4f] text-white",
+        icon: Js,
+        link: "https://developer.mozilla.org/es/docs/Web/JavaScript"
+    },
+    {
+        name: "Python",
+        class: "bg-green-500 text-white",
+        icon: Python,
+        link: "https://www.python.org/"
+    },
+    {
+        name: "Git",
+        class: "bg-white text-white",
+        icon: Git,
+        link: "https://git-scm.com/"
+    },
+    {
+        name: "NPM",
+        class: "bg-white text-white",
+        icon: NPM,
+        link: "https://www.npmjs.com/"
+    }
+]
+let shuffled = Tec.sort(() => Math.random() - 0.5);
+---
+<div class="max-w-[70%] p-6 overflow-hidden m-auto">
+    <ul class="flex flex-row gap-6 slider">
+        {shuffled.map((tag) => (
+            <a href={tag.link} target="_blank" class="aspect-square w-32 h-32 hover:scale-90 hover:cursor-pointer transition-all duration-200">
+              <span
+                class={`flex gap-x-6 rounded-xl ${tag.class} p-5`}
+              >
+                <tag.icon class="size-24" />
+              </span>
+            </a>
+          ))}
+    </ul>
+</div>
+<style>
+    .slider{
+        animation: scroll 30s linear infinite alternate;
+        animation-fill-mode: both;
+        animation-delay: 1s;
+        width: calc(200px * 14);
+    }
+    .slider:hover{
+        animation-play-state: paused;
+    }
+    @keyframes scroll{
+        100%{
+            transform: translate(calc(-128px * 14));
+        }
+    }
+</style>

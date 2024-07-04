@@ -1,7 +1,7 @@
 import { useEffect } from 'react'
 import './Space.css'
-const generateSpace = (selector, size, duration) => {
-    const colors = ["#fff2", "#fff4", "#fff7", "#fffc"];
+const generateSpace = (selector, size, duration, theme) => {
+    const colors = (theme == "dark") ? ["#fff2", "#fff4", "#fff7", "#fffc"] : ["#0002", "#0004", "#0007", "#000c"];
     const layer = [];
     for(let i = 1; i < 500; i++){
         const color = colors[Math.floor(Math.random() * colors.length)]
@@ -14,11 +14,22 @@ const generateSpace = (selector, size, duration) => {
     container.style.setProperty("--size", size);
     container.style.setProperty("--duration", duration);
 }
+const getThemePreference = () => {
+      if(localStorage.getItem("theme")){
+        if(localStorage.getItem("theme") !== "system"){
+            return localStorage.getItem("theme")
+        }
+      }
+      return window.matchMedia("(prefers-color-scheme: dark)").matches
+            ? "dark"
+            : "light"
+  }
 export function SpaceBG(){
+    const theme = getThemePreference()
     useEffect(() => {
-        generateSpace(".space-1", "1px", "25s")
-        generateSpace(".space-2", "2px", "20s")
-        generateSpace(".space-3", "4px", "15s")
+        generateSpace(".space-1", "1px", "25s", theme)
+        generateSpace(".space-2", "2px", "20s", theme)
+        generateSpace(".space-3", "4px", "15s", theme)
     }, [])
     
     return (
