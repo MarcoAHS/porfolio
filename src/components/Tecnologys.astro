@@ -116,7 +116,18 @@ let Tec = [
 ]
 let shuffled = Tec.sort(() => Math.random() - 0.5);
 ---
-<div class="max-w-[70%] p-6 overflow-hidden m-auto">
+<div class="max-w-[80%] p-6 overflow-hidden m-auto flex flex-row slider-contain">
+    <ul class="flex flex-row gap-6 slider">
+        {shuffled.map((tag) => (
+            <a href={tag.link} target="_blank" class="aspect-square w-32 h-32 hover:scale-90 hover:cursor-pointer transition-all duration-200">
+              <span
+                class={`flex gap-x-6 rounded-xl ${tag.class} p-5`}
+              >
+                <tag.icon class="size-24" />
+              </span>
+            </a>
+          ))}
+    </ul>
     <ul class="flex flex-row gap-6 slider">
         {shuffled.map((tag) => (
             <a href={tag.link} target="_blank" class="aspect-square w-32 h-32 hover:scale-90 hover:cursor-pointer transition-all duration-200">
@@ -131,17 +142,17 @@ let shuffled = Tec.sort(() => Math.random() - 0.5);
 </div>
 <style>
     .slider{
-        animation: scroll 30s linear infinite alternate;
+        animation: scroll 30s linear infinite;
         animation-fill-mode: both;
         animation-delay: 1s;
-        width: calc(200px * 14);
+        margin-right: 1.5rem;
     }
-    .slider:hover{
+    /* .slider:hover{
         animation-play-state: paused;
-    }
+    } */
     @keyframes scroll{
         100%{
-            transform: translate(calc(-128px * 14));
+            transform: translate(-101%);
         }
     }
 </style>
