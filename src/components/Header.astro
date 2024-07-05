@@ -13,11 +13,6 @@ const navItems = [
     url: "/#proyectos",
   },
   {
-    title: "Tecnologias",
-    label: "tecnologias",
-    url: "/#tecnologias",
-  },
-  {
     title: "Sobre mí",
     label: "sobre-mi",
     url: "/#sobre-mi",
@@ -39,7 +34,7 @@ const navItems = [
     {
       navItems.map((link) => (
         <a
-          class="relative block px-2 py-2 transition hover:text-yellow-500 dark:hover:text-yellow-400"
+          class="relative block px-1 py-1 md:px-3 md:py-3 transition hover:text-yellow-500 dark:hover:text-yellow-400"
           aria-label={link.label}
           href={link.url}
         >
