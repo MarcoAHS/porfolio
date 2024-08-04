@@ -1,7 +1,7 @@
 # 👨🏻‍💻 Porfolio Personalizado
 
 <div align="center">
-<a href="https://lucent-bublanina-a2ba53.netlify.app/">
+<a href="https://lucent-bublanina-a2ba53.netlify.app/" target="_blank">
 <img src="./public/porfolio.webp">
 </a>
 <p></p>
